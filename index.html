@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>The Chord Player</title>
+	</head>
+	<body>
+		<!-------------------------------------------------
+					H	T	M	L
+		------------------------------------------------->
+		<h1 style="text-align: left">tst</h1>
+		<hr />
+		<button id="PLAY">PLAY</button>
+		<button id="STOP">STOP</button>
+
+		<hr />
+		<div id="message_area">メッセージ表示</div>
+		<hr />
+
+		<!-------------------------------------------------
+							Java	Script
+		------------------------------------------------->
+		<script>
+			let current_chord = -1;
+
+			// click STOP
+			document.getElementById("STOP").addEventListener("click", () => {
+				//				clearInterval(id_interval);
+				//				id_interval = null;
+				// 現在発声コードを色付けを外す
+				const the_chord_playing_now = document.getElementById("STOP");
+				the_chord_playing_now.style.backgroundColor = "";
+				//				the_chord_playing_now.style.removeProperty("background-color");
+
+				document.getElementById("message_area").innerText = "Here";
+			});
+		</script>
+	</body>
+</html>
